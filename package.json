@@ -7,8 +7,10 @@
     "url": "https://github.com/jtegtmeier/portfolio-teg.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
+    "start": "build/main.js",
+    "start-loc": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors",
+    "postinstall": "webpack --config webpack-production.config.js --progress --colors",
     "lint": "eslint src && echo \"eslint: no lint errors\""
   },
   "private": true,
